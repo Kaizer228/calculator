@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="num1" placeholder="Enter Number 1"><br>
+    <input type="number" id="num2" placeholder="Enter Number 2"><br>
+       <select id="operations"><br>
+        <option id="addition">+</option>
+        <option id="minus">-</option>
+        <option id="times">*</option>
+        <option id="divide">/</option>
+      </select><br>
+    <button onclick="Getvalue()">Calculate</button><br>
+    <input type="number" id="sum" placeholder="The Sum Is ">
+
+ <script>
+
+ function Getvalue(){
+
+    var number1 = parseFloat(document.getElementById("num1").value);
+    var number2 = parseFloat(document.getElementById("num2").value);
+    var sum = document.getElementById("sum").value;
+    var operations = document.getElementById("operations").value;
+    var addition = document.getElementById("addition").value;
+    var minus = document.getElementById("minus").value;
+    var times = document.getElementById("times").value;
+    var divide = document.getElementById("divide").value;
+    
+       
+     if (operations == addition){
+      
+        var sum = document.getElementById("sum").value = number1 + number2;
+     }
+
+     if (operations == minus){
+
+        var sum = document.getElementById("sum").value = number1 - number2;
+        
+     }
+
+     if (operations == times){
+
+        var sum = document.getElementById("sum").value = number1 * number2;
+        
+     }
+
+     if (operations == divide){
+
+        var sum = document.getElementById("sum").value = number1 / number2;
+        
+     }
+
+}
+
+ </script>
+
+</body>
+</html>
